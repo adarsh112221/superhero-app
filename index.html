@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Superhero-Hunter-app</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="node_modules/crypto-js/crypto-js.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <body>
+        <div class="search-container">
+            <input id="search-bar" type="text" class="search-input" placeholder="Search...">
+            <div id="search-data">
+                <ul id="search-data-list">
+                </ul>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#" id="home-link" >Home</a></li>
+                <li><a href="#" id="fav-link" >Favourite</a></li>
+            </ul>
+        </nav>
+        <div id="card-box"></div>
+        <div id="herocontainer"></div>
+        <template id="card-template">
+            <div class="card" data-id="">
+                <img class="card-image" src="" alt="Card Image">
+                <div class="inside-card-flex">
+                <h2 class="card-title"></h2>
+                <i class="fa-solid fa-heart heartelement"></i>
+                </div>
+            </div>
+        </template>
+            <template id="character-details">
+                <div id="main-hero">
+                <div id="main-hero-internal-1">
+                <div class="character-image">
+                    <img alt="Character Image">
+                </div>
+                <div class="name" id="charName">Name:</div>
+                <div id="description">About:</div>
+            </div>
+            <div id="main-hero-internal">
+                <div class="comics content">
+                    <div class="heading">Comics: </div>
+                    <div class="comicsList">
+                        <ol class="list" id="comicsOl">
+                            <!-- Add more comics here -->
+                        </ol>
+                    </div>
+                </div>
+                <div class="series content">
+                    <div class="heading">Series: </div>
+                    <div class="seriesList">
+                        <ol class="list" id="seriesOl">
+                            <!-- Add more series here -->
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+            </template>
+<script src="script.js"></script>
+</body>
+</html>

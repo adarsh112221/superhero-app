@@ -1,0 +1,234 @@
+body {
+font-family: Arial, sans-serif;
+background-color: #000000;
+background-image: url(./530158.jpg);
+background-repeat: no-repeat;
+background-size: cover;
+background-attachment: fixed;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+html::-webkit-scrollbar {
+width: 2px;
+height: 20px;
+}
+
+html::-webkit-scrollbar-track {
+background: rgb(179, 177, 177);
+border-radius: 5px;
+}
+html::-webkit-scrollbar-thumb {
+background: rgb(136, 136, 136);
+border-radius:5px;
+height: 5px;
+}
+html::-webkit-scrollbar-thumb:hover {
+background: rgb(100, 100, 100);
+border-radius: 5px;
+}
+
+html::-webkit-scrollbar-thumb:active {
+background: rgb(68, 68, 68);
+border-radius: 5px;
+}
+html::-webkit-scrollbar-track {
+margin-top: 20px;
+margin-bottom: 20px;
+}
+.search-container {
+    display: flex;
+    width: 34%;
+    background-color: #fff;
+    border-radius: 25px;
+    padding: 10px;
+    margin: 10px;
+    position: relative;
+    justify-content: center;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+}
+.search-input {
+    width: 100%;
+    border: none;
+    padding: 8px;
+    border-radius: 25px 0 0 25px;
+    outline: none;
+}
+.search-button:hover {
+    background-color: #0056b3;
+}
+/* page switching design */
+#home-link,#fav-link{
+ text-decoration: none;
+ color: white;
+ font-size: 1.7rem;
+}
+nav{
+    width: 40%;
+}
+ul{
+    display:flex;
+    padding: 0px;
+    list-style-type: none;
+    justify-content: space-around;
+}
+nav ul li{
+    display: block;
+}
+nav ul li a{
+    padding: 10px;
+    transition: box-shadow 0.3s ease-in-out;
+    border-radius: 10px;
+}
+nav ul li a:hover{
+    box-shadow: 0px 0px 20px rgba(0, 255, 255, 0.5), 0px 0px 30px rgba(0, 255, 255, 0.3);
+}
+
+/* card box view styles */
+#card-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+    padding: 20px;
+    max-width: 70%;
+}
+.card {
+     background-color:#ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 20rem;
+    box-sizing: border-box;
+    transition: transform 0.2s ease-in-out;
+}
+.card:hover {
+    transform: scale(1.05);
+}
+.card-image {
+    width: 100%;
+    height: 17rem;
+    margin-bottom: 10px;
+}
+.card-title {
+    font-size: 1.5rem;
+    display: inline-block;
+    margin: 0;
+}
+.card-content {
+    font-size: 1rem;
+}
+#card-template{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.heartelement{
+    font-size: 30px;
+}
+.clickedicon{
+    color: red;
+}
+.inside-card-flex{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+/* style for the hero page view*/
+
+.details {
+    width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.content {
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 1px solid #ccc;
+}
+
+.name {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.heading {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.list {
+    padding-left: 20px;
+    list-style-type: decimal;
+}
+
+.character-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(176, 173, 173, 0.1);
+    margin: 20px 0;
+}
+
+.series,.comics,.name,#description{
+    font-size: 1.4rem;
+    color: white;
+}
+#herocontainer{
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    padding: 20px;
+    width: 70%;
+    max-height: auto;
+    overflow: scroll;
+    overflow-x: hidden;
+
+}
+
+#herocontainer::-webkit-scrollbar { width: 0
+}
+
+#main-hero{
+    display: flex;
+    justify-content: space-between;
+}
+#main-hero-internal-1{
+    width: 47%;
+}
+#main-hero-internal{
+    width: 37%;
+}
+
+/* search bar styles */
+#search-data{
+    width: 90%;
+    top: 100%;
+    border: 2px solid white;
+    position: absolute;
+    display: none;
+    background-color: #7393c2;
+    max-height: 50vh;
+    overflow: scroll;
+}
+#search-data::-webkit-scrollbar { width: 0
+}
+#search-data-list{
+    display: block;
+    cursor: pointer;
+}
+.character{
+    display: flex;
+    padding:15px;
+    border: 5px solid white;
+}
+
+
