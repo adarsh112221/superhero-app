@@ -120,8 +120,6 @@ const listItem = document.createElement('li');
 listItem.textContent = series.name;
 seriesOl.appendChild(listItem);
 });
-console.log(clonehero)
-console.log(heroContainer)
 heroContainer.appendChild(clonehero);
 }
 
@@ -165,7 +163,7 @@ abortControllers.push(controller);
 searchList.style.display = 'none'
 
 if(e.target==homeLink){
-cardContainer.innerHTML='';
+heroContainer.innerHTML='';
 e.preventDefault();
 throttle(fetchData,300)(fullUrl,signal);
 }
@@ -173,9 +171,8 @@ throttle(fetchData,300)(fullUrl,signal);
 
 
 if(e.target==favLink){
-cardContainer.innerHTML='';
+heroContainer.innerHTML='';
 e.preventDefault();
-card
 throttle(getfavdata,300)(signal)
 }
 
