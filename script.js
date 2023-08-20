@@ -141,10 +141,11 @@ searchlistul.innerHTML='';
 searchdata.forEach(character => {
 const characterDiv = document.createElement('li');
 characterDiv.className = 'character';
+characterDiv.classList.add('charecter-clicked')
 characterDiv.dataset.id=character.id;
 characterDiv.innerHTML = `
-<img style="height:100px; width:100px;" src="${character.thumbnail.path}.${character.thumbnail.extension}" alt="${character.name}">
-<h2 style="color:white;padding:5px;">${character.name}</h2> 
+<img class="charecter-clicked" style="height:100px; width:100px;" src="${character.thumbnail.path}.${character.thumbnail.extension}" alt="${character.name}">
+<h2 class="charecter-clicked" style="color:white;padding:5px;">${character.name}</h2> 
 `;
 searchlistul.appendChild(characterDiv);
 });
@@ -175,7 +176,7 @@ heroContainer.innerHTML='';
 e.preventDefault();
 throttle(getfavdata,300)(signal)
 }
-
+console.log(e.target)
 
 if(Array.from(e.target.classList).includes('heartelement')){
 e.target.classList.toggle('clickedicon');
@@ -191,6 +192,9 @@ localStorage.setItem('likedCharacters', JSON.stringify(favdata));
 }
 if(e.target.classList.contains('card-content')){
 showdetails(e.target.closest('[data-id]').dataset.id);
+}
+if(e.target.classList.contains('charecter-clicked')){
+  showdetails(e.target.closest('[data-id]').dataset.id);
 }
 })
 
