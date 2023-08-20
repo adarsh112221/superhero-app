@@ -129,7 +129,6 @@ heroContainer.appendChild(clonehero);
 //recommending data based on the keypress
 searchbar.onkeyup = async function(event){
 let userData = event.target.value;
-console.log(userData);
 if(userData.length==0){
 searchList.style.display = 'none'
 }
@@ -166,6 +165,7 @@ abortControllers.push(controller);
 searchList.style.display = 'none'
 
 if(e.target==homeLink){
+cardContainer.innerHTML='';
 e.preventDefault();
 throttle(fetchData,300)(fullUrl,signal);
 }
@@ -173,7 +173,9 @@ throttle(fetchData,300)(fullUrl,signal);
 
 
 if(e.target==favLink){
+cardContainer.innerHTML='';
 e.preventDefault();
+card
 throttle(getfavdata,300)(signal)
 }
 
@@ -190,9 +192,7 @@ favdata.splice(characterIndex, 1);
 localStorage.setItem('likedCharacters', JSON.stringify(favdata));
 }
 }
-
-
-if(e.target.closest('[data-id]')&&!Array.from(e.target.classList).includes('heartelement')){
+if(e.target.classList.contains('card-content')){
 showdetails(e.target.closest('[data-id]').dataset.id);
 }
 })
